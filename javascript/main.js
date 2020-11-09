@@ -24,7 +24,7 @@ methods: {
   nextPhoto() {
     this.indexPhoto += 1;
 
-    if (this.indexPhoto === this.photos.length - 1) {
+    if (this.indexPhoto > (this.photos.length - 1)) {
       this.indexPhoto = 0;
     } 
   },
@@ -34,9 +34,15 @@ methods: {
     this.indexPhoto -= 1;
 
     if (this.indexPhoto < 0) {
-      this.indexPhoto = this.photos.length -1
+      this.indexPhoto = (this.photos.length -1)
     }
 
+
+  },
+
+  setPhoto(index) {
+    
+    this.indexPhoto = index
 
   }
 
