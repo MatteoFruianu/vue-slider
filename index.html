@@ -18,20 +18,20 @@
 
             <!-- freccia sinistra -->
 
-        <div class="prev">
+        <div @click="prevPhoto" class="prev">
             <i class="fas fa-arrow-left"></i>
         </div>
 
         <!-- sliding images -->
 
        <div class="images">
-           <img src="./images/image1.jpg" alt="">
+           <img :src="photos[indexPhoto]" alt="landscape photo">
 
        </div>
        
        <!-- freccia destra -->
        
-       <div class="next">
+       <div @click="nextPhoto" class="next">
         <i class="fas fa-arrow-right"></i>
        </div>
 
