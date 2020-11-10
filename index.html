@@ -14,7 +14,12 @@
 
     <div id="app">
 
-        <div class="slider">
+        <div class="slider"
+           tabindex="0"
+           @keyup.arrow-left="prevPhoto"
+           @keyup.arrow-right="nextPhoto"
+           @mouseenter="stopLoop"
+           @mouseleave="startLoop" >
 
             <!-- freccia sinistra -->
 

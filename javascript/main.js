@@ -15,7 +15,17 @@ data: {
       './images/image2.jpg',
       './images/image3.jpg',
       './images/image4.jpg',
-    ]
+    ],
+
+    intervalID: 0,
+
+},
+
+// è norma mettere la funzione created tra data e methods, viene chiamata insieme all'istanza Vue
+
+created() {
+
+  this.startLoop(); 
 
 },
 
@@ -44,7 +54,18 @@ methods: {
     
     this.indexPhoto = index
 
-  }
+  },
+
+  startLoop() { 
+    this.intervalID = setInterval(() => {
+      this.nextPhoto()
+    },
+    3000) 
+   },
+
+   stopLoop() {
+     clearInterval(this.intervalID)
+   }
 
 }
 
